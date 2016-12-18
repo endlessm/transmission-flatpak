@@ -1,0 +1,40 @@
+{
+    "id": "com.transmissionbt.Transmission",
+    "branch": "master",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.22",
+    "sdk": "org.gnome.Sdk",
+    "command": "transmission-gtk",
+    "rename-desktop-file": "transmission-gtk.desktop",
+    "rename-icon": "transmission",
+    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=session-bus", "--filesystem=xdg-download" ],
+    "tags": ["nightly"],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "modules": [
+        {
+            "name": "libevent",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://github.com/libevent/libevent.git"
+                }
+            ]
+        },
+        {
+            "name": "transmission",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://github.com/transmission/transmission.git"
+                },
+                {
+                    "type": "shell",
+                    "commands": [
+                        "rm m4/glib-gettext.m4"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
