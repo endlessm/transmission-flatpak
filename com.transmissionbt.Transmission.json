@@ -8,8 +8,8 @@
     "rename-desktop-file": "transmission-gtk.desktop",
     "rename-icon": "transmission",
     "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=session-bus", "--filesystem=xdg-download" ],
-    "tags": ["nightly"],
-    "desktop-file-name-prefix": "(Nightly) ",
+    "tags": ["unofficial"],
+    "desktop-file-name-prefix": "(Unofficial) ",
     "modules": [
         {
             "name": "libevent",
