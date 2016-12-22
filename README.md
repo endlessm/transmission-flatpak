@@ -11,14 +11,14 @@ Dependencies:
 - org.gnome.Platform 3.22: http://flatpak.org/runtimes.html
 - org.gnome.Sdk 3.22: http://flatpak.org/runtimes.html
 
-## To build Transmission as a Flatpak package:
+Build Transmission as a Flatpak package:
 ```bash
 git clone https://github.com/pdureau/flatpak-manifests.git
 cd flatpak-manifests
 ./build.sh com.transmissionbt.Transmission.json
 ```
 
-## To deploy Transmission from your local repository:
+Deploy Transmission from your local repository:
 ```bash
 flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
 flatpak install --user local com.transmissionbt.Transmission
@@ -29,22 +29,7 @@ flatpak install --user local com.transmissionbt.Transmission
 A GTK3 app for finding and listening to internet radio stations:
 - https://github.com/haecker-felix/gradio
 
-Dependencies:
-- org.gnome.Platform 3.22: http://flatpak.org/runtimes.html
-- org.gnome.Sdk 3.22: http://flatpak.org/runtimes.html
-
-## To build Gradio as a Flatpak package:
-```bash
-git clone https://github.com/pdureau/flatpak-manifests.git
-cd flatpak-manifests
-./build.sh de.haeckerfelix.gradio.json
-```
-
-## To deploy Gradio from your local repository:
-```bash
-flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
-flatpak install --user local de.haeckerfelix.gradio
-```
+Gradio now has an official flatpak manifest.
 
 
 # Colophon
