@@ -1,23 +1,51 @@
 # flatpak-manifests
-Manifest files for missing flatpak apps:
-- Transmission: https://github.com/transmission/transmission
+Manifest files for missing flatpak apps.
 
-### Dependencies
-- flatpak: http://flatpak.org/
-- latest org.gnome.Platform and org.gnome.Sdk: http://flatpak.org/runtimes.html
 
-### To build Transmission as a Flatpak package:
+# Transmission
+BitTorrent client:
+- https://transmissionbt.com/
+- https://github.com/transmission/transmission
+
+Dependencies:
+- org.gnome.Platform 3.22: http://flatpak.org/runtimes.html
+- org.gnome.Sdk 3.22: http://flatpak.org/runtimes.html
+
+## To build Transmission as a Flatpak package:
 ```bash
-git clone https://github.com/pdureau/nightly-build-apps.git
-cd nightly-build-apps
+git clone https://github.com/pdureau/flatpak-manifests.git
+cd flatpak-manifests
 ./build.sh com.transmissionbt.Transmission.json
 ```
 
-### To deploy Transmission from your local repository:
+## To deploy Transmission from your local repository:
 ```bash
 flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
 flatpak install --user local com.transmissionbt.Transmission
 ```
+
+
+# Gradio
+A GTK3 app for finding and listening to internet radio stations:
+- https://github.com/haecker-felix/gradio
+
+Dependencies:
+- org.gnome.Platform 3.22: http://flatpak.org/runtimes.html
+- org.gnome.Sdk 3.22: http://flatpak.org/runtimes.html
+
+## To build Gradio as a Flatpak package:
+```bash
+git clone https://github.com/pdureau/flatpak-manifests.git
+cd flatpak-manifests
+./build.sh de.haeckerfelix.gradio.json
+```
+
+## To deploy Gradio from your local repository:
+```bash
+flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
+flatpak install --user local de.haeckerfelix.gradio
+```
+
 
 # Colophon
 From Oct 2015 to Dec 2016, this repository was a fork of alexlarsson/nightly-build-apps known as pdureau/nightly-build-apps. With the advent of flatpak builder, it became cleaner to keep it as a new repository.
