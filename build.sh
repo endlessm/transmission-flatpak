@@ -1,8 +1,18 @@
-#!/bin/sh
+#!/bin/bash
 
-FILE=$1
+set -e
 
-APPID=`basename $FILE .json`
+if [[ ! -d repo ]]
+then
+    ostree  init --mode=archive-z2 --repo=repo
+fi
 
-echo ========== Building $APPID ================
-flatpak-builder --force-clean --ccache --require-changes --repo=repo --subject="Nightly build of ${APPID}, `date`" ${EXPORT_ARGS-} app $FILE
+flatpak-builder \
+    --force-clean \
+    --ccache \
+    --require-changes \
+    --repo=repo \
+    --arch=$(flatpak --default-arch) \
+    --subject="build of com.transmissionbt.Transmission, $(date)" \
+    build \
+    com.transmissionbt.Transmission.json
