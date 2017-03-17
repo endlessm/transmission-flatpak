@@ -24,13 +24,5 @@ flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
 flatpak install --user local com.transmissionbt.Transmission
 ```
 
-
-# Gradio
-A GTK3 app for finding and listening to internet radio stations:
-- https://github.com/haecker-felix/gradio
-
-Gradio now has an official flatpak manifest.
-
-
 # Colophon
 From Oct 2015 to Dec 2016, this repository was a fork of alexlarsson/nightly-build-apps known as pdureau/nightly-build-apps. With the advent of flatpak builder, it became cleaner to keep it as a new repository.
