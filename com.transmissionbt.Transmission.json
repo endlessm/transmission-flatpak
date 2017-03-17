@@ -7,7 +7,13 @@
     "command": "transmission-gtk",
     "rename-desktop-file": "transmission-gtk.desktop",
     "rename-icon": "transmission",
-    "finish-args": ["--share=ipc", "--share=network", "--socket=x11", "--socket=session-bus", "--filesystem=xdg-download" ],
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=session-bus",
+        "--filesystem=xdg-download"
+    ],
     "modules": [
         {
             "name": "libevent",
