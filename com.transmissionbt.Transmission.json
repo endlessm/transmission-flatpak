@@ -16,7 +16,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://github.com/libevent/libevent.git"
+                    "url": "git://github.com/libevent/libevent.git",
+                    "branch": "release-2.1.8-stable"
                 }
             ]
         },
@@ -25,7 +26,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://github.com/transmission/transmission.git"
+                    "url": "git://github.com/transmission/transmission.git",
+                    "branch": "2.92"
                 },
                 {
                     "type": "shell",
