@@ -7,6 +7,7 @@
     "command": "transmission-gtk",
     "rename-desktop-file": "transmission-gtk.desktop",
     "rename-icon": "transmission",
+    "copy-icon": true,
     "finish-args": [
         "--share=ipc",
         "--share=network",
