@@ -1,21 +1,25 @@
-# flatpak-manifests
-Manifest files for missing flatpak apps.
+# Flatpak manifest for Transmission
 
+Transmission is a BitTorrent client ([website](https://transmissionbt.com/), [Git](https://github.com/transmission/transmission)). This is a [Flatpak](http://flatpak.org/) manifest for its [Gtk+](https://www.gtk.org/) version.
 
-# Transmission
-BitTorrent client:
-- https://transmissionbt.com/
-- https://github.com/transmission/transmission
+This manifest allows Transmission full access to:
+
+* the network, for obvious reasons
+* the host filesystem, because Transmission hasn't been adapted to use [portals](https://github.com/flatpak/flatpak/wiki/Portals) to open `.torrents` and read/write downloads
+* the host D-Bus session bus, because `transmission-gtk` claims the bus name `com.transmissionbt.transmission_{dev}_{inode}`, where `dev` and `inode` are determined by calling `stat(2)` on its config directory. This is, I assume, intended to allow running multiple instances of the app, but only if they use separate configs.
+
+## Build & Install
 
 Dependencies:
-- org.gnome.Platform 3.22: http://flatpak.org/runtimes.html
-- org.gnome.Sdk 3.22: http://flatpak.org/runtimes.html
+
+- `org.gnome.Platform` 3.22: <http://flatpak.org/runtimes.html>
+- `org.gnome.Sdk` 3.22: <http://flatpak.org/runtimes.html>
 
 Build Transmission as a Flatpak package:
 ```bash
-git clone https://github.com/pdureau/flatpak-manifests.git
-cd flatpak-manifests
-./build.sh com.transmissionbt.Transmission.json
+git clone https://github.com/endlessm/transmission-flatpak.git
+cd transmission-flatpak
+./build.sh
 ```
 
 Deploy Transmission from your local repository:
@@ -24,5 +28,6 @@ flatpak remote-add --user local "file://`pwd`/repo" --no-gpg-verify
 flatpak install --user local com.transmissionbt.Transmission
 ```
 
-# Colophon
-From Oct 2015 to Dec 2016, this repository was a fork of alexlarsson/nightly-build-apps known as pdureau/nightly-build-apps. With the advent of flatpak builder, it became cleaner to keep it as a new repository.
+## Colophon
+
+This manifest is derived from that published by Pierre Dureau at <https://github.com/pdureau/flatpak-manifests.git>.
