@@ -42,6 +42,22 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "metadata",
+            "no-autogen": true,
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "Makefile",
+                    "dest-filename": "Makefile"
+                },
+                {
+                    "type": "file",
+                    "path": "com.transmissionbt.Transmission.appdata.xml",
+                    "dest-filename": "com.transmissionbt.Transmission.appdata.xml"
+                }
+            ]
         }
     ]
 }
