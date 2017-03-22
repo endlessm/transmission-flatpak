@@ -8,6 +8,7 @@ then
 fi
 
 REPO=repo
+APP=com.transmissionbt.Transmission
 
 flatpak-builder \
     --force-clean \
@@ -15,8 +16,8 @@ flatpak-builder \
     --require-changes \
     --repo=$REPO \
     --arch=$(flatpak --default-arch) \
-    --subject="build of com.transmissionbt.Transmission, $(date)" \
+    --subject="build of $APP, $(date)" \
     build \
-    com.transmissionbt.Transmission.json
+    $APP.json
 flatpak build-update-repo \
     $REPO
