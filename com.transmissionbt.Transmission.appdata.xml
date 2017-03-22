@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="desktop">com.transmissionbt.Transmission.desktop</id>
+<component type="desktop-application">
+  <id>com.transmissionbt.Transmission.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0 OR GPL-3.0</project_license>
 
   <description>
     <p>BitTorrent is a peer-to-peer file-sharing protocol that is commonly used to distribute large amounts of data between multiple users.</p>
@@ -14,4 +15,4 @@
       <image type="source">https://raw.githubusercontent.com/endlessm/transmission-flatpak/master/screenshots/a.png</image>
     </screenshot>
   </screenshots>
-</application>
+</component>
