@@ -44,12 +44,12 @@
             ]
         },
         {
-            "name": "metadata",
+            "name": "appdata",
             "no-autogen": true,
             "sources": [
                 {
                     "type": "file",
-                    "path": "Makefile",
+                    "path": "appdata-Makefile",
                     "dest-filename": "Makefile"
                 },
                 {
