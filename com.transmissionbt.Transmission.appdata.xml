@@ -148,7 +148,7 @@
   <url type="homepage">https://transmissionbt.com/</url>
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://raw.githubusercontent.com/endlessm/transmission-flatpak/master/screenshots/a.png</image>
+      <image type="source">https://raw.githubusercontent.com/transmission/transmission/master/gtk/screenshots/a.png</image>
     </screenshot>
   </screenshots>
 </component>
